@@ -11,7 +11,7 @@ namespace SweepStakes
         //Member(HAS A)
         public string firstName;
         public string lastName;
-        public string emailAdress;
+        public string emailAddress;
         public int registrationNumber;
         //Constructor
         public Contestant()
