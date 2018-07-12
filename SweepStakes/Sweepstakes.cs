@@ -11,18 +11,17 @@ namespace SweepStakes
 
         //Member(HAS A)
         public string name;
-        IDictionary<int, Contestant> registeredContestant = new Dictionary<int, Contestant>();
         //Constructor
         public Sweepstakes(string name)
         {
             this.name = name;
-        } 
+        }
         //Methods(Can do)
+        IDictionary<int, Contestant> registeredContestant = new Dictionary<int, Contestant>();
         public void RegisterContestant(Contestant contestant)
         {
             registeredContestant.Add(contestant.registrationNumber, contestant);
         }
-
         public void PrintWinner()
         {
 
