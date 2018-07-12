@@ -19,11 +19,8 @@ namespace SweepStakes
                 case "2":
                     return new SweepstakesQueueManager();
                 default:
-                    return DetermineSweepstakesManager(selectManagerType);
-                
-            }
-            
-        }
-        
+                    return DetermineSweepstakesManager(selectManagerType);                
+            }            
+        }        
     }
 }

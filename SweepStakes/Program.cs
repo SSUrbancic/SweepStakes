@@ -10,7 +10,18 @@ namespace SweepStakes
     {
         static void Main(string[] args)
         {
+            string sweepsStakeManagerType = UserInterface.DetermineSweepStakesManagerType();
 
+
+            SweepstakesManagerFactory sweepstakesManagerFactory = new SweepstakesManagerFactory();
+            MarketingFirm marketingFirm = new MarketingFirm(sweepstakesManagerFactory.DetermineSweepstakesManager(sweepsStakeManagerType));
+
+
+
+
+
+
+            Console.ReadLine();
         }
     }
 }

@@ -44,7 +44,7 @@ namespace SweepStakes
         }
         public static string DetermineSweepStakesName()
         {
-            DisplayMessage("Enter name of sweepStakes");
+            DisplayMessage("Enter name of Sweepstakes");
             string userInput = Console.ReadLine();
             return userInput;
         }

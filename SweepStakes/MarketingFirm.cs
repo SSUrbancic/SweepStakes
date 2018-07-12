@@ -22,7 +22,11 @@ namespace SweepStakes
         {
             sweepstakesManager.GetSweepstakes();
         }
+        public void InsertISweepstakesManager()
+        {
+            sweepstakesManager.InsertSweepstakes(UserInterface.CreateSweepstakes());
+        }
 
-        
+
     }
 }
