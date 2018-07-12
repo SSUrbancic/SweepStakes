@@ -18,15 +18,21 @@ namespace SweepStakes
             this.name = name;
         }
         //Methods(Can do)
-        IDictionary<int, Contestant> registeredContestant = new Dictionary<int, Contestant>();
+        IDictionary<int, Contestant> registeredContestants = new Dictionary<int, Contestant>();
         public void RegisterContestant(Contestant contestant)
         {
-            registeredContestant.Add(contestant.registrationNumber, contestant);
+            registeredContestants.Add(contestant.registrationNumber, contestant);
         }
-
+        public string PickWinner()
+        {
+            Random random = new Random();
+            int randomContestant = random.Next(registeredContestants.Count);
+            sweepstakesWinner = registeredContestants[randomContestant].firstName + registeredContestants[randomContestant].lastName;
+            return sweepstakesWinner;
+        }
         public void PrintWinner()
         {
-
+            Console.WriteLine($"Sweepstakes Winner is: {sweepstakesWinner}");
         }
     }
 }
