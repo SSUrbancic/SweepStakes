@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SweepStakes
 {
-    class Sweepstakes 
+    public class Sweepstakes 
     {
 
         //Member(HAS A)
@@ -15,7 +15,7 @@ namespace SweepStakes
         //Constructor
         public Sweepstakes(string name)
         {
-            this.name = name;
+            name = UserInterface.DetermineSweepStakesName();
         }
         //Methods(Can do)
         IDictionary<int, Contestant> registeredContestants = new Dictionary<int, Contestant>();
@@ -27,7 +27,7 @@ namespace SweepStakes
         {
             Random random = new Random();
             int randomContestant = random.Next(registeredContestants.Count);
-            sweepstakesWinner = registeredContestants[randomContestant].firstName + registeredContestants[randomContestant].lastName;
+            sweepstakesWinner = registeredContestants[randomContestant].firstName + " " + registeredContestants[randomContestant].lastName;
             return sweepstakesWinner;
         }
         public void PrintWinner()
