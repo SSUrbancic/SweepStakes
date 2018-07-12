@@ -11,6 +11,7 @@ namespace SweepStakes
 
         //Member(HAS A)
         public string name;
+        public string sweepstakesWinner;
         //Constructor
         public Sweepstakes(string name)
         {
@@ -22,6 +23,7 @@ namespace SweepStakes
         {
             registeredContestant.Add(contestant.registrationNumber, contestant);
         }
+
         public void PrintWinner()
         {
 
