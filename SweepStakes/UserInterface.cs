@@ -54,6 +54,11 @@ namespace SweepStakes
             string userInput = Console.ReadLine();
             return userInput;
         }
+        public static Sweepstakes CreateSweepstakes()
+        {
+            Sweepstakes newSweepstake = new Sweepstakes(DetermineSweepStakesName());
+            return newSweepstake;
+        }
 
     }
 }

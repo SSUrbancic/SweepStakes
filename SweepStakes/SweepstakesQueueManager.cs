@@ -22,9 +22,10 @@ namespace SweepStakes
         }
         public Sweepstakes GetSweepstakes()
         {
-            Sweepstakes topOfSweepstakesQueue;
-            topOfSweepstakesQueue = sweepstakesQueue.Dequeue();
-            return topOfSweepstakesQueue;
+            Sweepstakes bottomOfSweepstakesQueue;
+            bottomOfSweepstakesQueue = sweepstakesQueue.Dequeue();
+            Console.WriteLine(bottomOfSweepstakesQueue.name);
+            return bottomOfSweepstakesQueue;
         }
 
         public void DisplaySweepstakesInQueue()
